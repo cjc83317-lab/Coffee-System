@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Machine - Order</title>
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+    <div class="container">
+        <h1>☕ Coffee Machine</h1>
+        <p class="subtitle">Place Your Order</p>
+        
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="customerName" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Select Coffee</label>
+            <div class="coffee-options" id="coffeeOptions"></div>
+        </div>
+        
+        <div class="form-group">
+            <label>Size</label>
+            <div class="size-options">
+                <button class="size-btn" data-size="Small" data-price="0">Small</button>
+                <button class="size-btn selected" data-size="Medium" data-price="0.5">Medium (+$0.50)</button>
+                <button class="size-btn" data-size="Large" data-price="1">Large (+$1.00)</button>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Quantity</label>
+            <input type="number" id="quantity" value="1" min="1" max="10">
+        </div>
+        
+        <div class="form-group">
+            <label>Extras (Optional)</label>
+            <div class="extras-grid">
+                <div class="extra-item">
+                    <input type="checkbox" id="extraShot" value="Extra Shot">
+                    <label for="extraShot">Extra Shot (+$0.50)</label>
+                </div>
+                <div class="extra-item">
+                    <input type="checkbox" id="whippedCream" value="Whipped Cream">
+                    <label for="whippedCream">Whipped Cream (+$0.75)</label>
+                </div>
+                <div class="extra-item">
+                    <input type="checkbox" id="vanilla" value="Vanilla Syrup">
+                    <label for="vanilla">Vanilla Syrup (+$0.50)</label>
+                </div>
+                <div class="extra-item">
+                    <input type="checkbox" id="caramel" value="Caramel Syrup">
+                    <label for="caramel">Caramel Syrup (+$0.50)</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="price-display">
+            <div class="price-label">Total Price</div>
+            <div class="price-amount" id="totalPrice">$4.50</div>
+        </div>
+        
+        <button class="btn-order" onclick="placeOrder()">Place Order</button>
+        
+        <div class="success-message" id="successMsg"></div>
+        <div class="error-message" id="errorMsg"></div>
+        
+        <div class="link-section">
+            <a href="barista.html">Go to Barista Dashboard →</a>
+        </div>
+    </div>
+    
+    <script src="customer.js"></script>
+</body>
+</html>
